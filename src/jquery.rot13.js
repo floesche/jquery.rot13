@@ -10,12 +10,12 @@
 
   var rot13 = function(str) {
     var chars = str.split('');
-    return $.map(chars, function(char) {
+    return $.map(chars, function(cha) {
       var charCode;
-      if(!char.match(/[A-Za-z]/)) {
-        return char;
+      if(!cha.match(/[A-Za-z]/)) {
+        return cha;
       }
-      charCode = char.charCodeAt(0);
+      charCode = cha.charCodeAt(0);
       if(charCode < 97) {
         charCode = (charCode - 52) % 26 + 65;
       } else {
